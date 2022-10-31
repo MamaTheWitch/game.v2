@@ -43,13 +43,13 @@ const Game = () => {
   };
 
   return (
-    <>
-      <Board id="board" squares={history[stepNumber]} onClick={handleClick} />
+    <div id="board">
+      <Board squares={history[stepNumber]} onClick={handleClick} />
       <p>
         {winner ? "Winner: " + winner : "Next Player: " + player}
       </p>
-    </>
-    )
+    </div>
+  )
 
 };
 
