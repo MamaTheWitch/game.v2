@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Board from './Board';
+import '../App.css';
 
 const Game = () => {
 
@@ -43,7 +44,7 @@ const Game = () => {
   };
 
   return (
-    <div id="board">
+    <div>
       <Board squares={history[stepNumber]} onClick={handleClick} />
       <p>
         {winner ? "Winner: " + winner : "Next Player: " + player}
