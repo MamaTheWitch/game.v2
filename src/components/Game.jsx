@@ -44,11 +44,14 @@ const Game = () => {
   };
 
   return (
-    <div>
+    <div id="container">
       <Board squares={history[stepNumber]} onClick={handleClick} />
-      <p>
-        {winner ? "Winner: " + winner : "Next Player: " + player}
-      </p>
+
+      <div id="info">
+        <p>
+          {winner ? "Winner: " + winner : "Next Player: " + player}
+        </p>
+      </div>
     </div>
   )
 

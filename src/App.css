@@ -3,10 +3,21 @@ main {
   vertical-align: center;
 }
 
+#container {
+  display: flex;
+  position: relative;
+}
+
+#info {
+  padding-left: 30px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
 #board {
-	width: 250px;
-	height: 250px;
-	margin: 10px;
 	display: grid;
   	gap: 5px;
   	grid-template-columns: repeat(3, 1fr);
@@ -43,20 +54,5 @@ button:active {
   background-image: -ms-linear-gradient(to top, #F6BE00 0%, red 100%);
  }
 
-div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;  
 
- }
-
-p {
-  padding-left: 30px;
-  margin-left: 20px;
-  margin-bottom: 10px;
- }
  
