@@ -43,14 +43,36 @@ const Game = () => {
     setXisNext(!xIsNext); // next is the opposite of current
   };
 
+  const refresh = () => window.location.reload(false) //refreshing the page
+
+  const timeTravel = history.map((hop, move) => {
+
+    const travel = () => jumpTo(move)
+
+    const jumpTo = (step) => {
+      setStepNumber(step);
+      setXisNext(step % 2 === 0);
+    };
+
+    const destination = move ? `${move}` : "0";
+    return (
+      <ul key={move}>
+        <button id="stepBubble" onClick={travel}>{destination}</button>
+      </ul>
+    );
+  });
+
+
   return (
     <div id="container">
       <Board squares={history[stepNumber]} onClick={handleClick} />
-
       <div id="info">
-        <p>
-          {winner ? "Winner: " + winner : "Next Player: " + player}
-        </p>
+        <p> {winner ? "Winner: " + winner : "Next Player: " + player} </p>
+        <button id="refresh" onClick={refresh}> 🔄 Restart the game </button>
+        <div>
+          <p>↩️ Time travel:</p>
+          <div id="timeline">{timeTravel}</div>
+        </div>
       </div>
     </div>
   )

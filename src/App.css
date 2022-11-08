@@ -17,6 +17,42 @@ main {
   text-align: center;
 }
 
+#refresh {
+  background: whitesmoke;
+  font-size: 10px;
+  width: auto;
+  height: auto;
+  padding: 3px;
+  line-height: unset;
+  -webkit-box-shadow: unset;
+   -moz-box-shadow: unset;
+   box-shadow: unset;
+}
+
+#stepBubble {
+   font-size: 10px;
+  padding: 5px;
+  background: #F6BE00;
+  border: unset;
+  border-radius: 100%;
+    width: auto;
+    height: auto;
+    line-height: unset;
+    -webkit-box-shadow: unset;
+     -moz-box-shadow: unset;
+  box-shadow: unset;
+  text-shadow: unset;
+}
+
+#timeline {
+  display: flex;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 #board {
 	display: grid;
   gap: 5px;
